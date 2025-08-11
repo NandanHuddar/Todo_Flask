@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background-color: #f2f2f7;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .email-header {
+            background: #007aff;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .email-header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .email-body {
+            padding: 40px 30px;
+        }
+        
+        .greeting {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #1d1d1f;
+        }
+        
+        .message {
+            color: #6e6e73;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+        
+        .verify-button {
+            display: inline-block;
+            background: #007aff;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            margin: 20px 0;
+        }
+        
+        .verify-button:hover {
+            background: #005ecb;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .footer-text {
+            color: #8e8e93;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #f2f2f7;
+        }
+        
+        .signature {
+            margin-top: 30px;
+            color: #6e6e73;
+        }
+        
+        @media (max-width: 600px) {
+            .email-container {
+                margin: 10px;
+                border-radius: 8px;
+            }
+            
+            .email-header, .email-body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>Email Verification</h1>
+        </div>
+        
+        <div class="email-body">
+            <div class="greeting">Hello {{ email }},</div>
+            
+            <div class="message">
+                Thank you for registering with our To-Do List App! To complete your account setup and start organizing your tasks, please verify your email address.
+            </div>
+            
+            <div class="button-container">
+                <a href="{{ verification_url }}" class="verify-button">Verify My Email</a>
+            </div>
+            
+            <div class="footer-text">
+                If you didn't create an account, you can safely ignore this email. The verification link will expire in 24 hours.
+            </div>
+            
+            <div class="signature">
+                <p>Best regards,<br>
+                <strong>The To-Do List Team</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

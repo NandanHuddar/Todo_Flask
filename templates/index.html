@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}To-Do List App - Home{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8 text-center">
+        <div class="mb-5" style="animation: fadeIn 0.6s ease-out;">
+            <h1 class="display-4 mb-3" style="font-weight: 700; color: #1d1d1f;">To-Do List</h1>
+            <p class="lead text-muted">Simple. Organized. Effective.</p>
+        </div>
+        
+        <div class="mb-5" style="animation: fadeIn 0.6s ease-out 0.2s both;">
+            <a href="/register" class="btn btn-primary btn-lg me-3 px-4">Get Started</a>
+            <a href="/login" class="btn btn-outline-primary btn-lg px-4">Sign In</a>
+        </div>
+        
+        <div class="row mt-5" style="animation: fadeIn 0.6s ease-out 0.4s both;">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 feature-card">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <i class="fas fa-tasks fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Simple Tasks</h5>
+                        <p class="card-text text-muted">Create and manage your tasks with ease. No clutter, just what you need.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 feature-card">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <i class="fas fa-calendar-alt fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Due Dates</h5>
+                        <p class="card-text text-muted">Set deadlines and stay on track. Never miss an important task again.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 feature-card">
+                    <div class="card-body text-center py-4">
+                        <div class="mb-3">
+                            <i class="fas fa-check-circle fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Track Progress</h5>
+                        <p class="card-text text-muted">Mark tasks as complete and see your productivity in action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.feature-card {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+}
+
+.feature-card:hover i {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+</style>
+{% endblock %}
