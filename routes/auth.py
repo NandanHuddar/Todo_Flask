@@ -102,7 +102,6 @@ def verify_email(token):
             db.session.commit()
             return render_template('verification_status.html', status='success', message=f'Email {email} verified successfully')
 
-    # Create the user now (only after successful token verification)
     try:
         new_user = User(email=email, password=hashed_password, email_verified=True)
         db.session.add(new_user)

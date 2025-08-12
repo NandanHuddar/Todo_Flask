@@ -18,8 +18,6 @@ def register_page():
 def dashboard():
     return render_template('dashboard.html')
 
-
-
 @views_bp.route('/static/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)

@@ -1,0 +1,164 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.0.9">
+  <diagram id="Vf4-HlW_1-3n_mD8g-pG" name="Page-1">
+    <mxGraphModel dx="1097" dy="646" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-1" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="140" y="80" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-2" value="Web App Frontend (HTML&amp;amp;CSS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="365" y="330" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-3" value="Flask Backend API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b655;" parent="1" vertex="1">
+          <mxGeometry x="565" y="30" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-4" value="PostgreSQL Database" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="1065" y="30" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-5" value="Mail Server" style="shape=message;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="1075" y="500" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-6" value="Scheduler (APScheduler)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="775" y="370" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" target="pUvB_cW5V7J_tQv2-3jA-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="185" y="140" as="sourcePoint" />
+            <mxPoint x="365" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="305" y="140" />
+              <mxPoint x="305" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-7" value="User Actions (Register, Login, CRUD)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-8" vertex="1" connectable="0">
+          <mxGeometry x="-0.0385" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryPerimeter=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="365" y="300" as="sourcePoint" />
+            <mxPoint x="170" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="405" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-9" value="Rendered Pages (HTML, JS)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-10" vertex="1" connectable="0">
+          <mxGeometry x="0.04" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-2" target="pUvB_cW5V7J_tQv2-3jA-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="525" y="300" as="sourcePoint" />
+            <mxPoint x="615" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="485" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-11" value="API Requests (with JWT)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-12" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-3" target="pUvB_cW5V7J_tQv2-3jA-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="775" y="300" as="sourcePoint" />
+            <mxPoint x="525" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="645" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-13" value="API Responses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-14" vertex="1" connectable="0">
+          <mxGeometry x="0.04" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-3" target="pUvB_cW5V7J_tQv2-3jA-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="775" y="300" as="sourcePoint" />
+            <mxPoint x="865" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-15" value="Read/Write User &amp; Task Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-16" vertex="1" connectable="0">
+          <mxGeometry x="0.06" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-18" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=-0.025;exitY=0.013;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-4" target="pUvB_cW5V7J_tQv2-3jA-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="945" y="300" as="sourcePoint" />
+            <mxPoint x="775" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-17" value="Data (Tasks, Users)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-18" vertex="1" connectable="0">
+          <mxGeometry x="0.04" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.983;entryY=0.923;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-6" target="pUvB_cW5V7J_tQv2-3jA-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="825" y="380" as="sourcePoint" />
+            <mxPoint x="765" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="855" y="280" />
+              <mxPoint x="722" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-19" value="Daily Job Trigger" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.0385" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.125;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.15;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-6" target="pUvB_cW5V7J_tQv2-3jA-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="775" y="510" as="sourcePoint" />
+            <mxPoint x="1065" y="106" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="935" y="106" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-21" value="Queries for Tasks to Send" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-22" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-6" target="pUvB_cW5V7J_tQv2-3jA-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="775" y="510" as="sourcePoint" />
+            <mxPoint x="995" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1115" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-23" value="Sends Daily Task List Email" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-24" vertex="1" connectable="0">
+          <mxGeometry x="-0.0385" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-26" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" parent="1" source="pUvB_cW5V7J_tQv2-3jA-5" target="pUvB_cW5V7J_tQv2-3jA-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="980" y="510" as="sourcePoint" />
+            <mxPoint x="230" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="140" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUvB_cW5V7J_tQv2-3jA-25" value="Task List Email" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pUvB_cW5V7J_tQv2-3jA-26" vertex="1" connectable="0">
+          <mxGeometry x="0.04" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -41,7 +41,7 @@ def init_scheduler(app, mail):
         id='daily_tasklist',
         func=lambda: send_daily_tasklist(app, mail),
         trigger='cron',
-        hour=10,
-        minute=16,
+        hour=18,
+        minute=30,
         timezone=timezone('Asia/Kolkata')
     )
