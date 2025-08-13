@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, current_app, render_template, url_for, flash, redirect
+from flask import Blueprint, jsonify, request, current_app, url_for, render_template
 from flask_jwt_extended import create_access_token
 from models.models import db, User
 from flask_mail import Message
