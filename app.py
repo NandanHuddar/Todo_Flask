@@ -1,7 +1,6 @@
+import os
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
-from datetime import timedelta
-import os
 from flask_cors import CORS
 from flask_mail import Mail
 from flask_limiter import Limiter
@@ -11,9 +10,21 @@ from routes.auth import auth_bp
 from routes.tasks import tasks_bp
 from routes.views import views_bp
 from scheduler import init_scheduler
+from config.config import DevConfig, StagingConfig, ProdConfig
 
 def create_app():
     app = Flask(__name__)
+
+    env = os.getenv('ENVIRONMENT', 'Dev')
+    if env == 'Dev':
+        app.config.from_object(DevConfig)
+    elif env == 'Stag':
+        app.config.from_object(StagingConfig)
+    elif env == 'Prod':
+        app.config.from_object(ProdConfig)
+    else:
+        raise ValueError(f"Invalid ENVIRONMENT: {env}")
+
     limiter = Limiter(
         get_remote_address,
         default_limits=["5 per minute"],
@@ -22,24 +33,6 @@ def create_app():
         on_breach=lambda: (jsonify({"message": "Too many requests"}), 429)
     )
     limiter.init_app(app)
-
-    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key')
-
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
-        'DATABASE_URL',
-        'postgresql+psycopg2://todo_user:secret123@localhost:5432/todo_db'
-    )
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-    app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'jwt-secret-key')
-    app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1)
-
-    app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-    app.config['MAIL_PORT'] = 587
-    app.config['MAIL_USE_TLS'] = True
-    app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
-    app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
-    app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_DEFAULT_SENDER')
 
     CORS(app)
     db.init_app(app)
@@ -65,4 +58,4 @@ def create_app():
 app = create_app()
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(host='0.0.0.0')
